@@ -1,0 +1,57 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.circle-btn {
+  position: relative;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.circle-btn:hover {
+  transform: scale(1.2);
+}
+.circle-btn:hover .filled {
+  stroke-dashoffset: 0;
+}
+.circle-btn:active {
+  transform: scale(1.5);
+}
+.circle-btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  will-change: transform;
+}
+.circle-btn svg {
+  transform: rotate(-90deg);
+}
+.circle-btn svg .bg-svg {
+  stroke: rgba(184, 184, 184, 0.2039215686);
+  stroke-width: 3;
+}
+.circle-btn svg .filled {
+  stroke: #ececec;
+  stroke-width: 3;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.4s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */
